@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadro em Movimento</title> <link rel="shortcut icon" href="kanban.ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> <header class="navbar">
+        <div class="kanban-header">
+            <div class="icon-container">
+                <img src="kanban.ico.png" alt="icone"/>
+            </div>
+            <span class="kanban-title">Quadro em Movimento</span>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">🌙</button>
+    </header>
+
+    <div class="board">
+        <div class="column" id="todo" data-status="todo" tabindex="0">
+            <h3>A Fazer</h3>
+            <div class="card-list"></div>
+            <button class="add-card-btn">+ Adicionar um cartão</button>
+        </div>
+
+        <div class="column" id="doing" data-status="doing" tabindex="0">
+            <h3>Em andamento</h3>
+            <div class="card-list"></div>
+            <button class="add-card-btn">+ Adicionar um cartão</button>
+        </div>
+
+        <div class="column" id="done" data-status="done" tabindex="0">
+            <h3>Concluído</h3>
+            <div class="card-list"></div>
+            <button class="add-card-btn">+ Adicionar um cartão</button>
+        </div>
+
+        <div class="add-column-wrapper">
+            <button id="add-list-btn" class="add-list-btn">+ Adicionar outra lista</button>
+        </div>
+    </div>
+
+    <div id="toast-container" class="toast-container"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
